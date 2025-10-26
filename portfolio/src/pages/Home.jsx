@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import myImg from "/public/pics/myImg.png";
+import MyResume from "../assets/my_Resume.pdf";
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
             View Projects
           </a>
           <a
-            href="/resume.pdf"
+            href={MyResume}
             download
             className="px-5 py-2 border-2 border-teal-500 text-teal-400 font-semibold rounded-lg flex items-center gap-2 hover:bg-teal-500 hover:text-white transition-all duration-300"
           >

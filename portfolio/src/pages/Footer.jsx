@@ -34,6 +34,14 @@ const Footer = () => {
             className="hover:text-teal-400"
           >
             YouTube
+          </a>{" "}
+          <a
+            href="https://wa.me/+918302661715"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-400"
+          >
+            Whatsapp
           </a>
         </div>
       </div>
