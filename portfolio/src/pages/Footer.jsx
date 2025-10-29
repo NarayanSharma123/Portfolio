@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left */}
         <p className="text-sm mb-4 md:mb-0">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Narayan Bhojak. All rights reserved.
         </p>
 
         {/* Right - social links */}
