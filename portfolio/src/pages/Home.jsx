@@ -33,7 +33,7 @@ const Home = () => {
           </a>
           <a
             href={MyResume}
-            download
+            download="Narayan-Bhojak-Portfolio"
             className="px-5 py-2 border-2 border-teal-500 text-teal-400 font-semibold rounded-lg flex items-center gap-2 hover:bg-teal-500 hover:text-white transition-all duration-300"
           >
             <ArrowDownTrayIcon className="h-5 w-5" />
