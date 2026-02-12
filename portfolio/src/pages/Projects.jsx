@@ -7,7 +7,7 @@ const projects = [
     description:
       "A real-time Twitter clone with Firebase Auth, MongoDB backend, and live notifications via Socket.IO. Fully responsive and modern design.",
     tech: ["React", "Firebase", "Node.js", "MongoDB", "Socket.IO"],
-    live: "https://github.com/NarayanSharma123/twiller-twitterclone.git",
+    live: "#",
     code: "https://github.com/NarayanSharma123/twiller-twitterclone.git",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     description:
       "A secure MERN-based chat app with authentication, image sharing, emojis, and live chat using Socket.IO and JWT.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    live: "https://github.com/NarayanSharma123/Alfa-zyngoChat-II.git",
+    live: "#",
     code: "https://github.com/NarayanSharma123/Alfa-zyngoChat-II.git",
   },
   {
@@ -23,8 +23,8 @@ const projects = [
     description:
       "My personal portfolio showcasing my full-stack projects and skills. Designed with React, Tailwind CSS, and smooth scroll animations.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    live: "https://narayan-portfolio-ten.vercel.app/",
-    code: "https://github.com/NarayanSharma123/narayan-portfolio.git",
+    live: "https://portfolio-pearl-nu-38.vercel.app/",
+    code: "https://github.com/NarayanSharma123/Portfolio.git",
   },
 ];
 
@@ -63,6 +63,12 @@ const Projects = () => {
             <div className="flex gap-4">
               <a
                 href={project.live}
+                onClick={(e) => {
+                  if (project.live === "#") {
+                    e.preventDefault();
+                    alert("Currently Live Demo is not Available");
+                  }
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition"
