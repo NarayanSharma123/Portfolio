@@ -1,12 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import myImg from "/public/pics/myImg.png";
 
 const Contacts = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [isShow, setIsShow] = useState(false);
+
+  const isSubmit = (e) => {
+    e.preventDefault();
+    setIsShow(true);
+  };
+
   return (
     <section
       id="contact"
       className="w-full min-h-screen bg-[#020617] text-white flex items-center justify-center px-6 md:px-16 lg:px-24 py-20"
     >
+      {isShow && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-[#0f172a] border border-teal-500 rounded-2xl p-6 w-[90%] max-w-lg shadow-2xl">
+            <h2 className="text-2xl font-bold text-teal-400 mb-4">
+              Contact Form Demo
+            </h2>
+
+            <textarea
+              rows="8"
+              readOnly
+              value={`Thank you, ${firstName} ${lastName}!
+
+              This contact form is currently a portfolio demonstration.
+
+              Name: ${firstName} ${lastName}
+              Email: ${email}
+              Message: ${message}
+
+              Backend integration is not enabled yet.`}
+              className="w-full bg-transparent text-white border border-gray-600 rounded-lg p-3 resize-none outline-none"
+            />
+
+            <div className="flex justify-end mt-5">
+              <button
+                onClick={() => setIsShow(false)}
+                className="px-6 py-2 bg-teal-500 rounded-lg hover:bg-teal-600"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-16">
         {/* Left Side */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
@@ -36,12 +82,14 @@ const Contacts = () => {
                 name="firstName"
                 placeholder="First Name"
                 className="w-full sm:w-1/2 px-4 py-3 rounded-lg bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all"
+                onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
                 className="w-full sm:w-1/2 px-4 py-3 rounded-lg bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all"
+                onChange={(e) => setLastName(e.target.value)}
               />
             </div>
 
@@ -51,6 +99,7 @@ const Contacts = () => {
               name="email"
               placeholder="Your Email"
               className="w-full px-4 py-3 rounded-lg bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all"
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             {/* Message */}
@@ -59,12 +108,14 @@ const Contacts = () => {
               rows="5"
               placeholder="Write your message..."
               className="w-full px-4 py-3 rounded-lg bg-transparent border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all resize-none"
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
 
             {/* Button */}
             <button
-              type="submit"
-              className="mt-3 w-full sm:w-auto px-8 py-3 rounded-lg bg-teal-500 font-semibold text-white shadow-md hover:bg-teal-600 hover:shadow-teal-500/30 active:scale-95 transition-all duration-300"
+              // type="submit"
+              className="mt-3 w-full sm:w-auto px-8 py-3 rounded-lg bg-teal-500 font-semibold text-white shadow-md hover:bg-teal-600 hover:shadow-teal-500/30 active:scale-95 transition-all duration-300 cursor-pointer"
+              onClick={isSubmit}
             >
               Send Message
             </button>

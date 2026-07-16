@@ -3,20 +3,19 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Twiller - Twitter Clone",
+    title: "GLOBEGREEKS – MERN Blog Web Application",
     description:
-      "A real-time Twitter clone with Firebase Auth, MongoDB backend, and live notifications via Socket.IO. Fully responsive and modern design.",
-    tech: ["React", "Firebase", "Node.js", "MongoDB", "Socket.IO"],
-    live: "#",
-    code: "https://github.com/NarayanSharma123/twiller-twitterclone.git",
-  },
-  {
-    title: "ZyngoChat - Real-time Chat App",
-    description:
-      "A secure MERN-based chat app with authentication, image sharing, emojis, and live chat using Socket.IO and JWT.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    live: "#",
-    code: "https://github.com/NarayanSharma123/Alfa-zyngoChat-II.git",
+      "Developed a full-stack MERN blogging platform that enables users to securely create, manage, search, and explore blog articles through a responsive and scalable web.",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "REST APIs",
+    ],
+    live: "https://globegreeks.vercel.app/",
+    code: "https://github.com/NarayanSharma123/GLOBEGREEKS",
   },
   {
     title: "Portfolio Website",

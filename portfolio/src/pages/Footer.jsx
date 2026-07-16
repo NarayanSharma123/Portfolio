@@ -20,7 +20,7 @@ const Footer = () => {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/narayan-bhojak-02573a369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            href="https://www.linkedin.com/in/narayanbhojak"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400"
@@ -28,7 +28,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-            href="https://www.youtube.com/@AIKARYAStudios"
+            href="https://www.youtube.com/@ApnaSource-01"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400"
